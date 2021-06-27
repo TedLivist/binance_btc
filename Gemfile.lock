@@ -18,8 +18,8 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  httparty
-  nokogiri
+  httparty (~> 0.18.1)
+  nokogiri (~> 1.11, >= 1.11.7)
 
 BUNDLED WITH
    2.2.20

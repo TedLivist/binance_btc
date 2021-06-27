@@ -1,12 +1,12 @@
 require 'nokogiri'
-require 'httparty'
 require 'byebug'
+require 'open-uri'
 
 def scraper
-  url = 'https://api.binance.com/api/v3/ticker/price?symbol=BTCBUSD'
-  unparsed_page = HTTParty.get(url)
-  parsed_page = Nokogiri::HTML(unparsed_page)
-  byebug
+  url = "https://api.binance.com/api/v3/ticker/price?symbol=BTCBUSD"
+  parsed_item = Nokogiri::HTML(URI.open(url))
+  my_num = parsed_item.text[29..-3]
+  puts my_num.to_f
 end
 
 scraper
