@@ -11,7 +11,4 @@ def scraper
   puts my_num.to_f
 end
 
-loop do
-  scraper
-  sleep(10)
-end
+scraper

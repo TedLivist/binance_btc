@@ -1,0 +1,1 @@
+This is a console app that scrapes the price of Bitcoin off the Binance API and give the price
