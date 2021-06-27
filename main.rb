@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'nokogiri'
 require 'byebug'
 require 'open-uri'
@@ -9,4 +11,7 @@ def scraper
   puts my_num.to_f
 end
 
-scraper
+loop do
+  scraper
+  sleep(10)
+end
